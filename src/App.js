@@ -1,12 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+
+import Salon from './components/Salon'
+import SalonList from './components/SalonList'
+
 import './App.css';
+
+
 
 function App() {
   return (
     <div className="wrapper">
+      <BrowserRouter>
+        <Switch>
 
-    </div>
+          <Route exact path="/salons/:slug">
+            <Salon />
+          </Route>
+
+          <Route exact path="/salons">
+            <SalonList />
+          </Route>
+
+          <Redirect from='/' to="/salons" />
+
+        </Switch>
+      </BrowserRouter>
+    </div >
   );
 }
 
