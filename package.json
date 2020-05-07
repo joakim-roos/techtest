@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mock:api": "json-server --watch src/server/db.json --port 4000"
+    "mock:api": "json-server --delay 1000 --watch src/server/db.json --port 4000"
   },
   "eslintConfig": {
     "extends": "react-app"

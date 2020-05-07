@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import axios from 'axios'
 
@@ -10,12 +10,15 @@ import { API_URL, SALONS } from '././constants/routes'
 
 
 function App() {
+  const [allSalons, setAllSalons] = useState([])
 
+  // Fetches all salon-data when the component mounts. 
+  // Adds the data to the allSalons-state. 
   useEffect(() => {
     const fetchAllSalons = () => {
       axios.get(`${API_URL}${SALONS}`)
         .then(res => {
-          console.log(res.data)
+          setAllSalons(res.data)
         })
         .catch(error => {
           console.log(error)
@@ -34,7 +37,9 @@ function App() {
           </Route>
 
           <Route exact path="/salons">
-            <SalonList />
+            <SalonList
+              allSalons={allSalons}
+            />
           </Route>
 
           <Redirect from='/' to="/salons" />
