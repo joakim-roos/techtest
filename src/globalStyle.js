@@ -13,8 +13,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'MillerBanner Light';
-  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'MillerBanner Light';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

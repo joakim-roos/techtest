@@ -4,9 +4,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Salon from './components/Salon'
 import SalonList from './components/SalonList'
 
-import './App.css';
-
-
 
 function App() {
   return (
