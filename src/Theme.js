@@ -13,7 +13,7 @@ const theme = {
     gold: '#b69f58',
     mineshaft: '#2b2b2b',
   },
-  fontSizes: {
+  fontSize: {
     lg: '22px',
     md: '20px',
     sm: '15px',
