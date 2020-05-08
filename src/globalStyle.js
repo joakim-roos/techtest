@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   url(${FontBureauMillerBannerLight}) format('opentype');
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   color: ${props => props.theme.colors.font_primary};
@@ -18,4 +18,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 `;

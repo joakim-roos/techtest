@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components'
 
 import * as Constant from '../../constants/assets'
 import * as S from './styles'
@@ -23,21 +24,72 @@ const FilterItem = () => (
 )
 
 
-const FilterSalons = (props) => (
-  <div>
-    <ul>
-      <li>Pris 0 - 250 kr</li>
-      <li>Pris 250 - 500 kr</li>
-      <li> Pris 500 - 750 kr</li>
-    </ul>
-  </div>
-)
+
 
 const StarRating = (props) => (
   <S.StarRating>
     {props.children}
   </S.StarRating>
 )
+
+
+const DropdownBox = styled.div`
+  font-family: 'Helvetica Neue';
+  position: relative;
+`;
+
+const DropdownButton = styled.div`
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  font-size: ${props => props.theme.fontSize.sm};
+  border-bottom: 1px solid ${props => props.theme.colors.gold};
+  cursor: pointer; 
+`;
+
+
+const DropdownContent = styled.div`
+  position: absolute;
+  z-index: 100%;
+  font-size: ${props => props.theme.fontSize.sm};
+  display: ${props => props.open ? 'block' : 'none'};
+
+  div:last-child {
+    border-bottom: 1px solid ${props => props.theme.colors.gold};
+  }
+`;
+
+const Selection = styled.div`
+  padding: 1rem;
+  background-color: white;
+  min-width: 100vw;
+  border-bottom: 1px solid ${props => props.theme.colors.border_light};
+  cursor: pointer; 
+`;
+
+const FilterSalons = (props) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleOpen = e => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <DropdownBox>
+      <DropdownButton
+        onClick={(e) => toggleOpen(e)}
+      >
+        Filter
+      </DropdownButton>
+      <DropdownContent open={isOpen}>
+        <Selection>Alla</Selection>
+        <Selection>Pris 0 - 250 kr</Selection>
+        <Selection>Pris 250 - 500 kr</Selection>
+        <Selection>Pris 500 - 750 kr</Selection>
+      </DropdownContent>
+    </DropdownBox>
+  )
+}
 
 function SalonList(props) {
   const [filterRange, setFilterRange] = useState([])
@@ -50,8 +102,7 @@ function SalonList(props) {
         <FilterItem />
       </S.Header>
 
-      <FilterSalons>
-        filter items here
+      <FilterSalons allSalons={props.allSalons}>
 
       </FilterSalons>
 
