@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   padding: 0;
+  color: ${props => props.theme.colors.font_primary};
   box-sizing: border-box;
   font-family: 'Helvetica Neue', 'MillerBanner Light';
   -webkit-font-smoothing: antialiased;
