@@ -5,7 +5,6 @@ import axios from 'axios'
 import Salon from './components/Salon'
 import SalonList from './components/SalonList'
 
-
 import { API_URL, SALONS } from '././constants/routes'
 
 

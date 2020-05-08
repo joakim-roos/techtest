@@ -37,15 +37,14 @@ function SalonList(props) {
   const [filteredSalons, setFilteredSalons] = useState({}) */
   return (
     <div>
-      <S.Header>
-        <ArrowLeftItem />
-        <S.PageTitle>Hår</S.PageTitle>
-        <FilterItem />
-      </S.Header>
-
-      <FilterSalons allSalons={props.allSalons}>
-
-      </FilterSalons>
+      <div style={{ position: 'sticky', top: '0' }}>
+        <S.Header>
+          <ArrowLeftItem />
+          <S.PageTitle>Hår</S.PageTitle>
+          <FilterItem />
+        </S.Header>
+        <FilterSalons allSalons={props.allSalons} />
+      </div>
 
       {props.allSalons.map(salon =>
         <S.SalonContainer key={salon.id}>

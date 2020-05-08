@@ -41,6 +41,10 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: '1px solid #eeeeee',
+    '&:first-child': { borderTop: '1px solid #eeeeee' },
+    '&:last-child': {
+      borderBottom: state.selectProps.menuIsOpen ? '1px solid #b69f58' : null
+    },
     borderRadius: 0,
     padding: '1rem',
     backgroundColor: state.isSelected ? '#eeeeee' : 'white',
@@ -48,7 +52,7 @@ const customStyles = {
     '&:hover': { backgroundColor: '#eeeeee', cursor: 'pointer' },
   }),
 
-  control: () => ({
+  control: (provided, state) => ({
     borderRadius: 0,
     display: 'flex',
     cursor: 'pointer',
@@ -63,20 +67,21 @@ const customStyles = {
   }),
   indicatorsContainer: () => ({
     padding: '1rem',
+    backgroundColor: 'white',
   }),
   dropdownIndicator: (provided, state) => ({
     padding: '0.5rem 0.2rem 0.5rem 0.2rem',
     transform: state.selectProps.menuIsOpen ? 'rotateZ(180deg)' : null,
   }),
 
-  menu: () => ({
+  menu: (provided, state) => ({
     borderRadius: 0,
     fontSize: '15px',
     margin: 0,
     position: 'absolute',
-    top: '100%',
     width: '100%',
     boxSizing: 'border-box',
+    top: '90%',
   }),
 
   valueContainer: () => ({
@@ -88,10 +93,11 @@ const customStyles = {
     flex: 1,
     flexWrap: 'wrap',
     alignItems: 'center',
+    backgroundColor: 'white',
   }),
 };
 
-//Changes the default arrow to the correct one. 
+//replaces the react-select arrow to the provided one. 
 const ArrowItem = () => (
   <div style={{ display: 'flex' }}>
     <S.Img src={ARROW_DOWN_SM} alt='Select a filter'></S.Img>
@@ -112,10 +118,11 @@ const FilterSalons = () => {
       <Select
         options={filterOptions}
         styles={customStyles}
-        closeMenuOnSelect
+        closeMenuOnSelect={true}
         defaultValue={filterOptions[0]}
         isSearchable={false}
         components={{ DropdownIndicator }}
+        onChange={e => console.log('it works')}
       />
     </div>
   );

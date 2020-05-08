@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const SalonContainer = styled.div`
@@ -49,6 +48,7 @@ margin-left: 1.5rem;
 
 export const Header = styled.header`
 display: flex;
+background-color: white;
 justify-content: space-between;
 border-bottom: 1px solid ${props => props.theme.colors.gold};
 font-family: 'MillerBanner Light';
