@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import FilterSalons from '../FilterDropdown'
 
 import * as Constant from '../../constants/assets'
@@ -33,8 +33,8 @@ const StarRating = (props) => (
 
 
 function SalonList(props) {
-  const [filterRange, setFilterRange] = useState([])
-  const [filteredSalons, setFilteredSalons] = useState({})
+  /* const [filterRange, setFilterRange] = useState([])
+  const [filteredSalons, setFilteredSalons] = useState({}) */
   return (
     <div>
       <S.Header>
