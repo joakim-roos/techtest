@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components'
+import * as Constant from '../../constants/assets'
 
 const SalonContainer = styled.div`
   display: flex; 
   font-family: 'MillerBanner Light';
   margin: 0 15px 0 15px;
-  border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 `;
+
 const SalonLeft = styled.div`
 
 `;
@@ -22,19 +23,49 @@ const SalonMidRight = styled.div`
 
 const SalonRight = styled.div`
 display: flex;
-align-items: center;
 `;
 
+const Header = styled.header`
+display: flex;
+justify-content: space-between;
+padding: 15px;
+`;
+
+
+const Arrow = () => (
+  <div>
+    <img src={Constant.ARROW_RIGHT_SM} alt='Go back'></img>
+  </div>
+)
+
+const ArrowLeft = () => (
+  <div>
+    <img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></img>
+  </div>
+)
+
+const Filter = () => (
+  <div>
+    <img src={Constant.FILTER} alt='Filter Salons'></img>
+  </div>
+)
 
 function SalonList(props) {
 
   return (
     <div>
+      <Header>
+        <ArrowLeft />
+        <div>Hår</div>
+        <Filter />
+      </Header>
       {props.allSalons.map(salon =>
         <SalonContainer key={salon.id}>
+
           <SalonLeft>
-            <p>12:00</p>
+            <p>{salon.availabletime}</p>
           </SalonLeft>
+
           <SalonMid>
             <p>{salon.name}</p>
             <p>{salon.stars}</p>
@@ -43,12 +74,13 @@ function SalonList(props) {
 
           <SalonMidRight>
             <p>{salon.price}{salon.unit}</p>
-            <p>30 min</p>
+            <p>{salon.duration}</p>
           </SalonMidRight>
 
           <SalonRight>
-            logo
+            <Arrow />
           </SalonRight>
+
         </SalonContainer>
       )}
     </div>

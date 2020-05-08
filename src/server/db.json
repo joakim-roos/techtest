@@ -11,7 +11,9 @@
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
       "price": "320",
-      "unit": "kr"
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
       "price": "320",
-      "unit": "kr"
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 3,
@@ -37,7 +41,9 @@
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
       "price": "320",
-      "unit": "kr"
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 4,
@@ -50,7 +56,9 @@
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
       "price": "320",
-      "unit": "kr"
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 5,
@@ -64,7 +72,8 @@
       "url": "www.salongweb.com",
       "price": "320",
       "unit": "kr",
-      "duration": "30"
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 6,
@@ -78,7 +87,8 @@
       "url": "www.salongweb.com",
       "price": "450",
       "unit": "kr",
-      "duration": "30"
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 7,
@@ -92,7 +102,8 @@
       "url": "www.salongweb.com",
       "price": "450",
       "unit": "kr",
-      "duration": "30"
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 8,
@@ -106,7 +117,8 @@
       "url": "www.salongweb.com",
       "price": "150",
       "unit": "kr",
-      "duration": "30"
+      "duration": "30 min",
+      "availabletime": "12.00"
     },
     {
       "id": 9,
@@ -120,7 +132,8 @@
       "url": "www.salongweb.com",
       "price": "150",
       "unit": "kr",
-      "duration": "30"
+      "duration": "30 min",
+      "availabletime": "12.00"
     }
   ]
 }
