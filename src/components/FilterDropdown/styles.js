@@ -34,3 +34,7 @@ export const Selection = styled.div`
   border-bottom: 1px solid ${props => props.theme.colors.border_light};
   cursor: pointer; 
 `;
+
+export const Img = styled.img`
+vertical-align: middle;
+`;

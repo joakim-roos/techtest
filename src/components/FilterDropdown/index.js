@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import Select from 'react-select'
 
-import * as S from '../FilterDropdown/styles'
+import React, { useState } from 'react';
+import Select, { components } from 'react-select';
+import * as S from './styles'
+
+import { ARROW_DOWN_SM } from '../../constants/assets'
 
 /* const FilterSalons = (props) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,17 +34,18 @@ const filterOptions = [
   { value: '0-250', label: 'Pris 0 - 250 kr' },
   { value: '250-500', label: 'Pris 250 - 500 kr' },
   { value: '500-750', label: 'Pris 500 - 750 kr' },
-]
+];
 
+//Override the react-select components default styling. 
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: '1px solid #eeeeee',
     borderRadius: 0,
-    padding: 16,
+    padding: '1rem',
     backgroundColor: state.isSelected ? '#eeeeee' : 'white',
     color: '#202020',
-    '&:hover': { backgroundColor: '#eeeeee', cursor: 'pointer' }
+    '&:hover': { backgroundColor: '#eeeeee', cursor: 'pointer' },
   }),
 
   control: () => ({
@@ -57,6 +60,13 @@ const customStyles = {
 
   indicatorSeparator: () => ({
     display: 'none',
+  }),
+  indicatorsContainer: () => ({
+    padding: '1rem',
+  }),
+  dropdownIndicator: (provided, state) => ({
+    padding: '0.5rem 0.2rem 0.5rem 0.2rem',
+    transform: state.selectProps.menuIsOpen ? 'rotateZ(180deg)' : null,
   }),
 
   menu: () => ({
@@ -73,35 +83,42 @@ const customStyles = {
     position: 'relative',
     boxSizing: 'border-box',
     overflow: 'hidden',
-    padding: '15px',
+    padding: '1rem',
     display: 'flex',
     flex: 1,
     flexWrap: 'wrap',
     alignItems: 'center',
   }),
+};
+
+//Changes the default arrow to the correct one. 
+const ArrowItem = () => (
+  <div style={{ display: 'flex' }}>
+    <S.Img src={ARROW_DOWN_SM} alt='Select a filter'></S.Img>
+  </div>
+)
+const DropdownIndicator = (props) => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <ArrowItem />
+    </components.DropdownIndicator>
+  )
 }
 
 
-const FilterSalons = (props) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleOpen = e => {
-    setIsOpen(!isOpen)
-  }
-
+const FilterSalons = () => {
   return (
-    <div style={{ position: 'relative' }}>
+    <div>
       <Select
         options={filterOptions}
         styles={customStyles}
         closeMenuOnSelect
         defaultValue={filterOptions[0]}
         isSearchable={false}
-      >
-
-      </Select>
+        components={{ DropdownIndicator }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default FilterSalons
+export default FilterSalons;
