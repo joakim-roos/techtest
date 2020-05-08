@@ -50,7 +50,6 @@ margin-left: 1.5rem;
 export const Header = styled.header`
 display: flex;
 justify-content: space-between;
-padding: 15px;
 border-bottom: 1px solid ${props => props.theme.colors.gold};
 font-family: 'MillerBanner Light';
 `;
@@ -60,7 +59,9 @@ vertical-align: middle;
 `;
 
 export const PageTitle = styled.h3`
+padding: 1rem;
 font-size: ${props => props.theme.fontSize.lg};
+font-family: 'MillerBanner Light';
 font-weight: 300;
 margin: 0;
 `;

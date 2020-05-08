@@ -12,18 +12,16 @@ const ArrowRightItem = () => (
 )
 
 const ArrowLeftItem = () => (
-  <div style={{ display: 'flex' }}>
+  <div style={{ display: 'flex', padding: '1.1rem', cursor: 'pointer' }}>
     <S.Img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></S.Img>
   </div>
 )
 
 const FilterItem = () => (
-  <div style={{ display: 'flex' }}>
+  <div style={{ display: 'flex', padding: '1.1rem', cursor: 'pointer' }}>
     <S.Img src={Constant.FILTER} alt='Filter Salons'></S.Img>
   </div>
 )
-
-
 
 
 const StarRating = (props) => (

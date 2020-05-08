@@ -40,12 +40,12 @@ const customStyles = {
     borderBottom: '1px solid #eeeeee',
     borderRadius: 0,
     padding: 16,
-    backgroundColor: state.isSelected ? 'lightgrey' : 'white',
+    backgroundColor: state.isSelected ? '#eeeeee' : 'white',
     color: '#202020',
+    '&:hover': { backgroundColor: '#eeeeee', cursor: 'pointer' }
   }),
 
   control: () => ({
-    // none of react-select's styles are passed to <Control />
     borderRadius: 0,
     display: 'flex',
     cursor: 'pointer',
@@ -54,9 +54,11 @@ const customStyles = {
     fontFamily: 'Helvetica Neue',
     fontSize: '15px',
   }),
+
   indicatorSeparator: () => ({
     display: 'none',
   }),
+
   menu: () => ({
     borderRadius: 0,
     fontSize: '15px',
@@ -65,8 +67,8 @@ const customStyles = {
     top: '100%',
     width: '100%',
     boxSizing: 'border-box',
-
   }),
+
   valueContainer: () => ({
     position: 'relative',
     boxSizing: 'border-box',
@@ -77,9 +79,6 @@ const customStyles = {
     flexWrap: 'wrap',
     alignItems: 'center',
   }),
-  container: (provided, state) => ({
-    ...provided,
-  })
 }
 
 
