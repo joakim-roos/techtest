@@ -1,6 +1,5 @@
 import React from 'react';
 import FilterSalons from '../FilterDropdown'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import * as Constant from '../../constants/assets'
@@ -8,7 +7,7 @@ import * as S from './styles'
 
 
 
-
+// make reusable? 
 const ArrowRightItem = () => (
   <img src={Constant.ARROW_RIGHT_SM} alt='Go back'></img>
 )
@@ -21,7 +20,7 @@ const FilterItem = () => (
   <img src={Constant.FILTER} alt='Filter Salons'></img>
 )
 
-
+//reusable star rating component
 const StarRating = (props) => (
   <S.StarRating>
     {props.children}
@@ -56,7 +55,7 @@ function SalonList(props) {
           </S.SalonLeft>
 
           <S.SalonMid>
-            <S.Paragraph>{salon.name}</S.Paragraph>
+            <S.SalonName>{salon.name}</S.SalonName>
             <StarRating>
               <S.Paragraph>{salon.stars}</S.Paragraph>
             </StarRating>

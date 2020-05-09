@@ -17,10 +17,11 @@ export const SalonMid = styled.div`
 margin-left: 1rem;
 flex: 1;
 
-> p:first-child {
+> h3:first-child {
   font-family: 'MillerBanner Light';
   font-size: ${props => props.theme.fontSize.md};
   line-height: 0.8;
+  font-weight: normal;
 }
 
 > p:last-child {
@@ -55,10 +56,8 @@ border-bottom: 1px solid ${props => props.theme.colors.gold};
 font-family: 'MillerBanner Light';
 `;
 
-export const Img = styled.img`
-`;
 
-export const PageTitle = styled.h3`
+export const PageTitle = styled.h1`
 padding: 1rem;
 font-size: ${props => props.theme.fontSize.lg};
 font-family: 'MillerBanner Light';
@@ -68,6 +67,10 @@ margin: 0;
 
 export const Paragraph = styled.p`
 margin: 0px;
+`;
+
+export const SalonName = styled.h3`
+margin: 0px; 
 `;
 
 export const StarRating = styled.div`
