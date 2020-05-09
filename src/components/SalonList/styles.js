@@ -73,10 +73,6 @@ export const SalonName = styled.h3`
 margin: 0px; 
 `;
 
-export const StarRating = styled.div`
-margin: 0.5rem 0 0.5rem 0;
-`;
-
 export const StyledLink = styled(Link)`
 padding: 1rem;
 display: flex;

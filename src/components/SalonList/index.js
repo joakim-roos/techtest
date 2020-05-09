@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterSalons from '../FilterDropdown'
+import StarRating from '../StarRating'
 import styled from 'styled-components'
 
 import * as Constant from '../../constants/assets'
@@ -20,14 +21,6 @@ const FilterItem = () => (
   <img src={Constant.FILTER} alt='Filter Salons'></img>
 )
 
-//reusable star rating component
-const StarRating = (props) => (
-  <S.StarRating>
-    {props.children}
-  </S.StarRating>
-)
-
-
 
 function SalonList(props) {
   /* const [filterRange, setFilterRange] = useState([])
@@ -47,7 +40,7 @@ function SalonList(props) {
         <FilterSalons allSalons={props.allSalons} />
       </div>
 
-      {props.allSalons.map(salon =>
+      {props.allSalons && props.allSalons.map(salon =>
         <S.SalonContainer key={salon.id}>
 
           <S.SalonLeft>
@@ -56,7 +49,7 @@ function SalonList(props) {
 
           <S.SalonMid>
             <S.SalonName>{salon.name}</S.SalonName>
-            <StarRating>
+            <StarRating stars={salon.stars} totalStars={5}>
               <S.Paragraph>{salon.stars}</S.Paragraph>
             </StarRating>
             <S.Paragraph>{salon.address}</S.Paragraph>
