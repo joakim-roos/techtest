@@ -10,15 +10,15 @@ import * as S from './styles'
 
 
 const ArrowRightItem = () => (
-  <S.Img src={Constant.ARROW_RIGHT_SM} alt='Go back'></S.Img>
+  <img src={Constant.ARROW_RIGHT_SM} alt='Go back'></img>
 )
 
 const ArrowLeftItem = () => (
-  <S.Img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></S.Img>
+  <img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></img>
 )
 
 const FilterItem = () => (
-  <S.Img src={Constant.FILTER} alt='Filter Salons'></S.Img>
+  <img src={Constant.FILTER} alt='Filter Salons'></img>
 )
 
 

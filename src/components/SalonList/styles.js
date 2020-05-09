@@ -56,7 +56,6 @@ font-family: 'MillerBanner Light';
 `;
 
 export const Img = styled.img`
-vertical-align: middle;
 `;
 
 export const PageTitle = styled.h3`
