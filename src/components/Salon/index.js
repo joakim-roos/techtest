@@ -1,6 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import * as S from './styles'
 import { IMAGE, IMAGE2X, IMAGE3X } from '../../constants/assets'
+
+import styled from 'styled-components'
 
 export const SalonImage = () => (
   <img
@@ -15,13 +18,26 @@ export const SalonImage = () => (
   </img>
 )
 
+const Background = styled.div`
+background-image: url(${IMAGE3X});
+background-size: contain;
+background-repeat: no-repeat;
+height: 300px;
+
+`;
+
 function Salon(props) {
   let { slug } = useParams()
 
   return (
     <div>
-      <SalonImage />
-      <p>Salon: {slug}</p>
+      <Background>
+        <S.Header>
+          fgdfgd
+
+        </S.Header>
+      </Background>
+
     </div>
   )
 }

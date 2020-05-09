@@ -4,7 +4,7 @@ import { STAR, STAR_FILL } from '../../constants/assets'
 
 
 const StarItem = (props) => (
-  <S.Img src={props.selected ? STAR : STAR_FILL} alt='star'></S.Img>
+  <S.Img src={props.selected ? STAR_FILL : STAR} alt='star'></S.Img>
 )
 
 function StarRating({ totalStars, stars, children }) {

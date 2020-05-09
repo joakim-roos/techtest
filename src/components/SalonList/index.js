@@ -21,6 +21,10 @@ const FilterItem = () => (
   <img src={Constant.FILTER} alt='Filter Salons'></img>
 )
 
+const Item = ({ src, alt }) => (
+  <img src={src} alt={alt}></img>
+)
+
 
 function SalonList(props) {
   /* const [filterRange, setFilterRange] = useState([])
@@ -30,11 +34,11 @@ function SalonList(props) {
       <div style={{ position: 'sticky', top: '0' }}>
         <S.Header>
           <S.StyledLink to='#'>
-            <ArrowLeftItem />
+            <Item src={Constant.ARROW_LEFT_LG} alt={'Go back'} />
           </S.StyledLink>
           <S.PageTitle>Hår</S.PageTitle>
           <S.StyledLink to='#'>
-            <FilterItem />
+            <Item src={Constant.FILTER} alt={'Filter Salons'} />
           </S.StyledLink>
         </S.Header>
         <FilterSalons allSalons={props.allSalons} />
@@ -51,7 +55,7 @@ function SalonList(props) {
             <S.SalonName>{salon.name}</S.SalonName>
 
             <StarRating stars={salon.stars} totalStars={5}>
-
+              {/* Reviews here */}
             </StarRating>
             <S.Paragraph>{salon.address}</S.Paragraph>
           </S.SalonMid>
@@ -62,7 +66,7 @@ function SalonList(props) {
           </S.SalonMidRight>
 
           <S.SalonRight>
-            <ArrowRightItem />
+            <Item src={Constant.ARROW_RIGHT_SM} alt={'Go to salon'} />
           </S.SalonRight>
 
         </S.SalonContainer>
