@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const SalonContainer = styled.div`
   display: flex; 
@@ -72,4 +73,9 @@ margin: 0px;
 
 export const StarRating = styled.div`
 margin: 0.5rem 0 0.5rem 0;
+`;
+
+export const StyledLink = styled(Link)`
+padding: 1rem;
+display: flex;
 `;

@@ -1,26 +1,24 @@
 import React from 'react';
 import FilterSalons from '../FilterDropdown'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 import * as Constant from '../../constants/assets'
 import * as S from './styles'
 
 
+
+
 const ArrowRightItem = () => (
-  <div style={{ display: 'flex' }}>
-    <S.Img src={Constant.ARROW_RIGHT_SM} alt='Go back'></S.Img>
-  </div>
+  <S.Img src={Constant.ARROW_RIGHT_SM} alt='Go back'></S.Img>
 )
 
 const ArrowLeftItem = () => (
-  <div style={{ display: 'flex', padding: '1rem', cursor: 'pointer' }}>
-    <S.Img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></S.Img>
-  </div>
+  <S.Img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></S.Img>
 )
 
 const FilterItem = () => (
-  <div style={{ display: 'flex', padding: '1rem', cursor: 'pointer' }}>
-    <S.Img src={Constant.FILTER} alt='Filter Salons'></S.Img>
-  </div>
+  <S.Img src={Constant.FILTER} alt='Filter Salons'></S.Img>
 )
 
 
@@ -39,9 +37,13 @@ function SalonList(props) {
     <div>
       <div style={{ position: 'sticky', top: '0' }}>
         <S.Header>
-          <ArrowLeftItem />
+          <S.StyledLink to='#'>
+            <ArrowLeftItem />
+          </S.StyledLink>
           <S.PageTitle>Hår</S.PageTitle>
-          <FilterItem />
+          <S.StyledLink to='#'>
+            <FilterItem />
+          </S.StyledLink>
         </S.Header>
         <FilterSalons allSalons={props.allSalons} />
       </div>
