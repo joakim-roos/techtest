@@ -11,6 +11,7 @@ export const SalonContainer = styled.div`
 
 export const SalonLeft = styled.div`
 font-size: ${props => props.theme.fontSize.sm};
+
 `;
 
 export const SalonMid = styled.div`
@@ -32,12 +33,12 @@ flex: 1;
 
 export const SalonMidRight = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
-  
-  
+  line-height: 1;
+
  p:last-child {
    font-size: ${props => props.theme.fontSize.xs};
    color: ${props => props.theme.colors.font_secondary};
-   margin: 0.7rem 0 0.7rem 0;
+   padding: 0.9rem 0 0.9rem 0;
    float: right;
  }
 `;
