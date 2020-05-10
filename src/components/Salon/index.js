@@ -22,7 +22,6 @@ function Salon() {
 
   let salonData = pageData[0]
 
-
   // fetches page-data depending on which salon the user clicked on. 
   useEffect(() => {
     const fetchPageData = () => {
@@ -45,16 +44,16 @@ function Salon() {
         <S.Gradient />
 
         <S.Wrapper>
+
           <S.Header>
             <S.StyledLink to='/salons'>
               <Item style={{ marginTop: '1px' }} src={ARROW_LEFT_WHITE} alt={'go back'} />
             </S.StyledLink>
-
-
             <Item style={{ padding: '1rem' }} src={HEART} alt={'make favourite'}></Item>
-
           </S.Header>
+
           <TitleAndStarRating salonData={salonData} />
+
         </S.Wrapper>
       </S.Container>
 
@@ -64,7 +63,6 @@ function Salon() {
       </S.LinkWrapper>
 
       <InfoSection salonData={salonData} />
-
     </>
   )
 }
