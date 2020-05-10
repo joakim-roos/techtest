@@ -18,7 +18,6 @@ function StarRating({ totalStars, stars, children }) {
           howManyStars={index < stars} >
         </StarItem>)
       }
-
       {children}
     </S.StarRating >
   )

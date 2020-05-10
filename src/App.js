@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   return (
-    <div className="wrapper">
+    <div>
       <BrowserRouter>
         <Switch>
 
@@ -44,7 +44,7 @@ function App() {
 
         </Switch>
       </BrowserRouter>
-    </div >
+    </div>
   );
 }
 

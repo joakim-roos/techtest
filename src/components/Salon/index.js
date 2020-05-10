@@ -58,7 +58,12 @@ function Salon() {
             {salonData &&
               <>
                 <S.PageTitle>{salonData.name}</S.PageTitle>
-                <StarRating stars={salonData.stars} totalStars={5}></StarRating>
+                <StarRating
+                  stars={salonData.stars}
+                  totalStars={5}
+                >
+                  ({salonData.reviews})
+                </StarRating>
               </>
             }
           </S.TitleContainer>

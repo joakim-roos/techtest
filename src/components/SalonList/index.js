@@ -48,9 +48,13 @@ function SalonList(props) {
             <S.SalonMid>
               <S.SalonName>{salon.name}</S.SalonName>
 
-              <StarRating stars={salon.stars} totalStars={5}>
-                {/* Reviews here */}
+              <StarRating
+                stars={salon.stars}
+                totalStars={5}
+              >
+                ({salon.reviews})
               </StarRating>
+
               <S.Paragraph>{salon.address}</S.Paragraph>
             </S.SalonMid>
 
