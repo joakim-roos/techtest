@@ -36,7 +36,9 @@ const filterOptions = [
   { value: '500-750', label: 'Pris 500 - 750 kr' },
 ];
 
-//Override the react-select components default styling. 
+//Override the react-select components default styling
+// I chose to use this Library because I wanted the options-dropdown to be accessible. 
+
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
@@ -97,7 +99,7 @@ const customStyles = {
   }),
 };
 
-//replaces the react-select arrow to the provided one. 
+//replaces the default React-Select arrow to the new, provided one. 
 const ArrowItem = () => (
   <div style={{ display: 'flex' }}>
     <S.Img src={ARROW_DOWN_SM} alt='Select a filter'></S.Img>
@@ -110,7 +112,6 @@ const DropdownIndicator = (props) => {
     </components.DropdownIndicator>
   )
 }
-
 
 const FilterSalons = ({ filterHandler }) => {
   return (

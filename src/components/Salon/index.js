@@ -8,7 +8,7 @@ import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
 import { API_URL } from '../../constants/routes'
 
 import InfoSection from './InfoSection'
-import StarRating from '../StarRating'
+import TitleAndStarRating from './TitleAndStarRating'
 import Image from './Image'
 
 
@@ -22,6 +22,8 @@ function Salon() {
 
   let salonData = pageData[0]
 
+
+  // fetches page-data depending on which salon the user clicked on. 
   useEffect(() => {
     const fetchPageData = () => {
       axios.get(`${API_URL}/salons/?slug=${slug}`)
@@ -48,27 +50,11 @@ function Salon() {
               <Item style={{ marginTop: '1px' }} src={ARROW_LEFT_WHITE} alt={'go back'} />
             </S.StyledLink>
 
-            <div>
-              <Item src={HEART} alt={'make favourite'}></Item>
-            </div>
+
+            <Item style={{ padding: '1rem' }} src={HEART} alt={'make favourite'}></Item>
+
           </S.Header>
-
-          <S.TitleContainer>
-
-            {salonData &&
-              <>
-                <S.PageTitle>{salonData.name}</S.PageTitle>
-                <StarRating
-                  stars={salonData.stars}
-                  totalStars={5}
-                  infoPage
-                >
-                  {salonData.reviews}
-                </StarRating>
-              </>
-            }
-          </S.TitleContainer>
-
+          <TitleAndStarRating salonData={salonData} />
         </S.Wrapper>
       </S.Container>
 

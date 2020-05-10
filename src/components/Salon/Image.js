@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 
+
+// Returns an Image, letting the browser/ui decide which picture quality to use. 
+
 import { IMAGE, IMAGE2X, IMAGE3X } from '../../constants/assets'
 const Image = ({ className }) => (
   <StyledImage
