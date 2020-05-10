@@ -1,7 +1,7 @@
 import React from 'react';
 import FilterSalons from '../FilterDropdown'
 import StarRating from '../StarRating'
-import styled from 'styled-components'
+
 
 import * as Constant from '../../constants/assets'
 import * as S from './styles'

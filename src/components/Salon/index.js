@@ -1,13 +1,14 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import * as S from './styles'
 import { IMAGE, IMAGE2X, IMAGE3X } from '../../constants/assets'
 import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
 import StarRating from '../StarRating'
 import styled from 'styled-components'
 
-export const BackgroundImage = () => (
+const Image = ({ className }) => (
   <img
+    className={className}
     srcSet={`
       ${IMAGE3X} 3x,
       ${IMAGE2X} 2x,
@@ -19,11 +20,11 @@ export const BackgroundImage = () => (
   </img>
 )
 
-/* const Background = styled.div`
-background-image: url(${IMAGE3X});
-background-size: contain;
-background-repeat: no-repeat;
-`; */
+
+const StyledImage = styled(Image)`
+display: block;
+width: 100%;
+`;
 
 const PageTitle = styled.h1`
 font-family: 'MillerBanner Light';
@@ -42,13 +43,32 @@ justify-content: space-between;
 height: 100%;
 `;
 
-const Button = styled.button`
-width: 50%;
-padding: 1rem;
-font-size: ${props => props.theme.fontSize.sm};
-background-color: ${props => props.theme.colors.bg_primary};
-border: none;
+const LinkWrapper = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+> a:first-child {
+  border-bottom: 2px solid ${props => props.theme.colors.gold}
+}
 `;
+
+const StyledLink = styled(Link)`
+font-size: ${props => props.theme.fontSize.sm};
+text-decoration: none;
+width: 50%;
+text-align: center;
+padding: 1rem;
+cursor: pointer;
+`;
+
+const Container = styled.div`
+position: relative;
+`;
+const TitleContainer = styled.div`
+padding: 1rem 1rem 0 1rem;
+`;
+
 
 const Item = ({ src, alt, style }) => (
   <img style={style} src={src} alt={alt}></img>
@@ -59,8 +79,8 @@ function Salon(props) {
 
   return (
     <>
-      <div style={{ position: 'relative' }}>
-        <BackgroundImage />
+      <Container>
+        <StyledImage />
 
         <Wrapper>
           <S.Header>
@@ -73,19 +93,23 @@ function Salon(props) {
             </div>
           </S.Header>
 
-          <div style={{ padding: '0.4rem' }}>
+          <TitleContainer>
             <PageTitle>Salon Namn</PageTitle>
             <StarRating totalStars={5} />
-          </div>
+          </TitleContainer>
 
 
         </Wrapper>
-      </div>
+      </Container>
 
-      <div>
-        <Button>Info</Button>
-        <Button>Schema</Button>
-      </div>
+      <LinkWrapper>
+        <StyledLink to='#detail-section'>Info</StyledLink>
+        <StyledLink to='#schema-section'>Schema</StyledLink>
+      </LinkWrapper>
+
+      <section id='detail-section'>
+        info
+        </section>
     </>
   )
 }

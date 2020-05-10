@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import * as S from '../StarRating/styles'
 import { STAR, STAR_FILL } from '../../constants/assets'
 
