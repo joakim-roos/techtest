@@ -7,7 +7,7 @@ import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
 
 import { API_URL } from '../../constants/routes'
 
-import DetailsSection from './DetailsSection'
+import InfoSection from './InfoSection'
 import StarRating from '../StarRating'
 import Image from './Image'
 
@@ -62,7 +62,7 @@ function Salon() {
                   stars={salonData.stars}
                   totalStars={5}
                 >
-                  ({salonData.reviews})
+                  {salonData.reviews}
                 </StarRating>
               </>
             }
@@ -72,11 +72,11 @@ function Salon() {
       </S.Container>
 
       <S.LinkWrapper>
-        <S.SectionLink to='#detail-section'>Info</S.SectionLink>
-        <S.SectionLink to='#schema-section'>Schema</S.SectionLink>
+        <S.SectionLink to='#'>Info</S.SectionLink>
+        <S.SectionLink to='#'>Schema</S.SectionLink>
       </S.LinkWrapper>
 
-      <DetailsSection salonData={salonData} />
+      <InfoSection salonData={salonData} />
 
     </>
   )

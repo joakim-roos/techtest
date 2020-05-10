@@ -7,13 +7,13 @@ const Item = ({ src, alt, style }) => (
   <img style={style} src={src} alt={alt}></img>
 )
 
-const DetailsSection = ({ salonData }) => {
+const InfoSection = ({ salonData }) => {
 
   return (
     <>
       {
         salonData &&
-        <S.DetailsSection>
+        <S.InfoSection>
           <div>
             <Item src={PIN}></Item>
             <p>{salonData.address}, {salonData.postalcode} {salonData.city}</p>
@@ -33,10 +33,10 @@ const DetailsSection = ({ salonData }) => {
           <div>
             <p>{salonData.info}</p>
           </div>
-        </S.DetailsSection>
+        </S.InfoSection>
       }
     </>
   )
 }
 
-export default DetailsSection;
+export default InfoSection;

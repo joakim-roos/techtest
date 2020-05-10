@@ -51,8 +51,9 @@ function SalonList(props) {
               <StarRating
                 stars={salon.stars}
                 totalStars={5}
+                smallText
               >
-                ({salon.reviews})
+                {salon.reviews}
               </StarRating>
 
               <S.Paragraph>{salon.address}</S.Paragraph>

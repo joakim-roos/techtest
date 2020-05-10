@@ -70,7 +70,7 @@ export const TitleContainer = styled.div`
 padding: 1rem 1rem 0 1rem;
 `;
 
-export const DetailsSection = styled.div`
+export const InfoSection = styled.div`
 margin: 1rem;
 div {
   display: flex;
@@ -78,7 +78,6 @@ div {
   background-color: ${props => props.theme.colors.bg_primary};
   border-bottom: 1px solid ${props => props.theme.colors.border_light};
 }
-
 > div:first-child {
   margin-top: 1rem;
 }

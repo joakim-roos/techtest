@@ -7,10 +7,10 @@ const StarItem = (props) => (
   <S.Img src={props.howManyStars ? STAR_FILL : STAR} alt='star'></S.Img>
 )
 
-function StarRating({ totalStars, stars, children }) {
+function StarRating({ totalStars, stars, children, smallText }) {
 
   return (
-    <S.StarRating>
+    <S.StarRating smallText={smallText}>
 
       {[...Array(totalStars)].map((n, index) =>
         <StarItem
@@ -18,7 +18,7 @@ function StarRating({ totalStars, stars, children }) {
           howManyStars={index < stars} >
         </StarItem>)
       }
-      {children}
+      <div>({children})</div>
     </S.StarRating >
   )
 }
