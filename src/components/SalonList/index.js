@@ -1,6 +1,7 @@
 import React from 'react';
 import FilterSalons from '../FilterDropdown'
 import StarRating from '../StarRating'
+import { Link } from 'react-router-dom';
 
 
 import * as Constant from '../../constants/assets'
@@ -32,33 +33,39 @@ function SalonList(props) {
       </div>
 
       {props.allSalons && props.allSalons.map(salon =>
-        <S.SalonContainer key={salon.id}>
+        <Link
+          to={`/salon/:${salon.slug}`}
+          style={{ textDecoration: 'none' }}
+        >
+          <S.SalonContainer key={salon.id}>
 
-          <S.SalonLeft>
-            <S.Paragraph>{salon.availabletime}</S.Paragraph>
-          </S.SalonLeft>
+            <S.SalonLeft>
+              <S.Paragraph>{salon.availabletime}</S.Paragraph>
+            </S.SalonLeft>
 
-          <S.SalonMid>
-            <S.SalonName>{salon.name}</S.SalonName>
+            <S.SalonMid>
+              <S.SalonName>{salon.name}</S.SalonName>
 
-            <StarRating stars={salon.stars} totalStars={5}>
-              {/* Reviews here */}
-            </StarRating>
-            <S.Paragraph>{salon.address}</S.Paragraph>
-          </S.SalonMid>
+              <StarRating stars={salon.stars} totalStars={5}>
+                {/* Reviews here */}
+              </StarRating>
+              <S.Paragraph>{salon.address}</S.Paragraph>
+            </S.SalonMid>
 
-          <S.SalonMidRight>
-            <S.Paragraph>{salon.price} {salon.unit}</S.Paragraph>
-            <S.Paragraph>{salon.duration}</S.Paragraph>
-          </S.SalonMidRight>
+            <S.SalonMidRight>
+              <S.Paragraph>{salon.price} {salon.unit}</S.Paragraph>
+              <S.Paragraph>{salon.duration}</S.Paragraph>
+            </S.SalonMidRight>
 
-          <S.SalonRight>
-            <Item src={Constant.ARROW_RIGHT_SM} alt={'Go to salon'} />
-          </S.SalonRight>
+            <S.SalonRight>
+              <Item src={Constant.ARROW_RIGHT_SM} alt={'Go to salon'} />
+            </S.SalonRight>
 
-        </S.SalonContainer>
-      )}
-    </div>
+          </S.SalonContainer>
+        </Link>
+      )
+      }
+    </div >
   )
 }
 
