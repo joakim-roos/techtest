@@ -10,7 +10,6 @@ import { API_URL, SALONS } from '././constants/routes'
 
 function App() {
   const [allSalons, setAllSalons] = useState([])
-
   // Fetches all salon-data when the component mounts. 
   // Adds the data to the allSalons-state. 
   useEffect(() => {
