@@ -14,7 +14,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "320",
+      "price": 320,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -33,7 +33,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "320",
+      "price": 320,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -52,7 +52,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "320",
+      "price": 320,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -71,7 +71,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "320",
+      "price": 320,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -90,7 +90,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "320",
+      "price": 320,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -109,7 +109,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "450",
+      "price": 450,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -128,7 +128,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "450",
+      "price": 450,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -147,7 +147,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "150",
+      "price": 150,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
@@ -166,7 +166,7 @@
       "phone": "08-522 389 20",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
       "url": "www.salongweb.com",
-      "price": "150",
+      "price": 150,
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"

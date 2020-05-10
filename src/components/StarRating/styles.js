@@ -1,21 +1,29 @@
 import styled from 'styled-components'
 
 export const StarRating = styled.div`
-padding: 0.9rem 0 0.9rem 0;
 display: flex;
+padding: ${props => props.infoPage
+    ?
+    '0.4rem 0 1.2rem 0'
+    :
+    '0.9rem 0 0.9rem 0'
+  };
+
 > div {
 font-weight: 300;
-font-size: ${props => props.smallText
+
+font-size: ${props => props.infoPage
     ?
-    props.theme.fontSize.xxs
-    :
     props.theme.fontSize.xs
-  };
-color: ${props => props.smallText
-    ?
-    props.theme.colors.font_primary
     :
+    props.theme.fontSize.xxs
+  };
+
+color: ${props => props.infoPage
+    ?
     props.theme.colors.white
+    :
+    props.theme.colors.font_primary
   };
 }
 `;

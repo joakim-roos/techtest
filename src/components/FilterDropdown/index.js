@@ -112,7 +112,7 @@ const DropdownIndicator = (props) => {
 }
 
 
-const FilterSalons = () => {
+const FilterSalons = ({ filterHandler }) => {
   return (
     <div>
       <Select
@@ -122,7 +122,7 @@ const FilterSalons = () => {
         defaultValue={filterOptions[0]}
         isSearchable={false}
         components={{ DropdownIndicator }}
-        onChange={e => console.log('it works')}
+        onChange={e => filterHandler(e)}
       />
     </div>
   );

@@ -61,6 +61,7 @@ function Salon() {
                 <StarRating
                   stars={salonData.stars}
                   totalStars={5}
+                  infoPage
                 >
                   {salonData.reviews}
                 </StarRating>
