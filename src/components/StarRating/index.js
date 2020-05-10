@@ -7,8 +7,8 @@ const StarItem = (props) => (
   <S.Img src={props.howManyStars ? STAR_FILL : STAR} alt='star'></S.Img>
 )
 
+// renders the amount of stars the salon has. 
 function StarRating({ totalStars, stars, children, infoPage }) {
-
   return (
     <S.StarRating infoPage={infoPage}>
 

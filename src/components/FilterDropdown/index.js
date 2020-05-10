@@ -29,6 +29,8 @@ import { ARROW_DOWN_SM } from '../../constants/assets'
   )
 } */
 
+// filter options
+
 const filterOptions = [
   { value: 'all', label: 'Alla' },
   { value: '0-250', label: 'Pris 0 - 250 kr' },
@@ -36,9 +38,7 @@ const filterOptions = [
   { value: '500-750', label: 'Pris 500 - 750 kr' },
 ];
 
-//Override the react-select components default styling
-// I chose to use this Library because I wanted the options-dropdown to be accessible. 
-
+// Override the react-select components default styling
 const customStyles = {
   option: (provided, state) => ({
     ...provided,

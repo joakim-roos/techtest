@@ -18,9 +18,11 @@ function SalonList(props) {
     setFilterValue(e)
   }
 
+
+  // Filter through the allSalons-prop and returns the filtered data. 
+  // filterValue is the value from the FilterDropdown-component. 
   useEffect(() => {
     let value = filterValue.value
-    /* if (filterValue === '') return; */
     let result;
     if (value === '0-250') {
       result = props.allSalons.filter(salon => salon.price > 0 && salon.price <= 250)
@@ -64,7 +66,7 @@ function SalonList(props) {
 
       {filteredSalons && filteredSalons.map(salon =>
         <Link
-          key={salon.slug}
+          key={salon.id}
           to={`/salons/${salon.slug}`}
           style={{ textDecoration: 'none' }}
         >
