@@ -4,7 +4,7 @@ import { STAR, STAR_FILL } from '../../constants/assets'
 
 
 const StarItem = (props) => (
-  <S.Img src={props.selected ? STAR_FILL : STAR} alt='star'></S.Img>
+  <S.Img src={props.howManyStars ? STAR_FILL : STAR} alt='star'></S.Img>
 )
 
 function StarRating({ totalStars, stars, children }) {
@@ -15,7 +15,7 @@ function StarRating({ totalStars, stars, children }) {
       {[...Array(totalStars)].map((n, index) =>
         <StarItem
           key={index}
-          selected={index < stars} >
+          howManyStars={index < stars} >
         </StarItem>)
       }
 

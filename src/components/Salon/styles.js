@@ -93,3 +93,11 @@ div {
   padding-left: 0;
 }
 `;
+
+export const Gradient = styled.div`
+position: absolute;
+bottom: 0px;
+background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1));
+width: 100%;
+height: 60%;
+`;

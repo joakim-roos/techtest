@@ -1,52 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
 import * as S from './styles'
-import { IMAGE, IMAGE2X, IMAGE3X } from '../../constants/assets'
+import axios from 'axios'
+
 import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
-import { PIN, PHONE, GLOBE, CLOCK } from '../../constants/assets'
+
 import { API_URL } from '../../constants/routes'
+
+import DetailsSection from './DetailsSection'
 import StarRating from '../StarRating'
-import styled from 'styled-components'
+import Image from './Image'
 
-const Image = ({ className }) => (
-  <img
-    className={className}
-    srcSet={`
-      ${IMAGE3X} 3x,
-      ${IMAGE2X} 2x,
-      ${IMAGE} 1x,
-      `}
-    src={IMAGE3X}
-    alt='A womans long hair is caught by the wind'
-  >
-  </img>
-)
-
-const StyledImage = styled(Image)`
-display: block;
-width: 100%;
-z-index: -1000;
-`;
-
-const Gradient = styled.div`
-position: absolute;
-bottom: 0px;
-background: linear-gradient(to bottom, #ffffff 0%,#cbebff 38%,#000000 100%);
-width: 100%;
-height: 30%;
-`;
 
 const Item = ({ src, alt, style }) => (
   <img style={style} src={src} alt={alt}></img>
 )
 
-function Salon(props) {
+function Salon() {
   const [pageData, setPageData] = useState({})
   let { slug } = useParams()
 
   let salonData = pageData[0]
-  console.log(salonData)
 
   useEffect(() => {
     const fetchPageData = () => {
@@ -65,8 +39,8 @@ function Salon(props) {
   return (
     <>
       <S.Container>
-        <StyledImage />
-        <Gradient>hejhej</Gradient>
+        <Image />
+        <S.Gradient />
 
         <S.Wrapper>
           <S.Header>
@@ -97,31 +71,8 @@ function Salon(props) {
         <S.SectionLink to='#schema-section'>Schema</S.SectionLink>
       </S.LinkWrapper>
 
+      <DetailsSection salonData={salonData} />
 
-      {
-        salonData &&
-        <S.DetailsSection>
-          <div>
-            <Item src={PIN}></Item>
-            <p>{salonData.address}, {salonData.postalcode} {salonData.city}</p>
-          </div>
-          <div>
-            <Item src={CLOCK}></Item>
-            <p>{`Öppet till ${salonData.openuntil}`}</p>
-          </div>
-          <div>
-            <Item src={PHONE}></Item>
-            <p>{salonData.phone}</p>
-          </div>
-          <div>
-            <Item src={GLOBE}></Item>
-            <p>{salonData.url}</p>
-          </div>
-          <div>
-            <p>{salonData.info}</p>
-          </div>
-        </S.DetailsSection>
-      }
     </>
   )
 }
