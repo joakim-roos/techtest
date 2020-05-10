@@ -26,6 +26,15 @@ const Image = ({ className }) => (
 const StyledImage = styled(Image)`
 display: block;
 width: 100%;
+z-index: -1000;
+`;
+
+const Gradient = styled.div`
+position: absolute;
+bottom: 0px;
+background: linear-gradient(to bottom, #ffffff 0%,#cbebff 38%,#000000 100%);
+width: 100%;
+height: 30%;
 `;
 
 const Item = ({ src, alt, style }) => (
@@ -35,6 +44,9 @@ const Item = ({ src, alt, style }) => (
 function Salon(props) {
   const [pageData, setPageData] = useState({})
   let { slug } = useParams()
+
+  let salonData = pageData[0]
+  console.log(salonData)
 
   useEffect(() => {
     const fetchPageData = () => {
@@ -54,10 +66,11 @@ function Salon(props) {
     <>
       <S.Container>
         <StyledImage />
+        <Gradient>hejhej</Gradient>
 
         <S.Wrapper>
           <S.Header>
-            <S.StyledLink to='#'>
+            <S.StyledLink to='/salons'>
               <Item style={{ marginTop: '1px' }} src={ARROW_LEFT_WHITE} alt={'go back'} />
             </S.StyledLink>
 
@@ -67,10 +80,14 @@ function Salon(props) {
           </S.Header>
 
           <S.TitleContainer>
-            <S.PageTitle>salong namn</S.PageTitle>
-            <StarRating totalStars={5} />
-          </S.TitleContainer>
 
+            {salonData &&
+              <>
+                <S.PageTitle>{salonData.name}</S.PageTitle>
+                <StarRating stars={salonData.stars} totalStars={5}></StarRating>
+              </>
+            }
+          </S.TitleContainer>
 
         </S.Wrapper>
       </S.Container>
@@ -81,23 +98,27 @@ function Salon(props) {
       </S.LinkWrapper>
 
 
-      {pageData[0] &&
+      {
+        salonData &&
         <S.DetailsSection>
           <div>
             <Item src={PIN}></Item>
-            <p>{pageData[0].address}</p>
+            <p>{salonData.address}, {salonData.postalcode} {salonData.city}</p>
           </div>
           <div>
             <Item src={CLOCK}></Item>
+            <p>{`Öppet till ${salonData.openuntil}`}</p>
           </div>
           <div>
             <Item src={PHONE}></Item>
+            <p>{salonData.phone}</p>
           </div>
           <div>
             <Item src={GLOBE}></Item>
+            <p>{salonData.url}</p>
           </div>
           <div>
-            <p>aasdasdadad</p>
+            <p>{salonData.info}</p>
           </div>
         </S.DetailsSection>
       }

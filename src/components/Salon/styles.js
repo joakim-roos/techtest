@@ -85,8 +85,11 @@ div {
 > div:last-child {
   border: none;
 }
+> div p {
+  padding-left: 1rem;
+}
 > div:last-child p {
   margin-top: 0.5rem;
+  padding-left: 0;
 }
-
 `;
