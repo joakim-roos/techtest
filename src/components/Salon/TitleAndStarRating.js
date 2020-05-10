@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import * as S from './styles'
 import StarRating from '.././StarRating'
 
+
+// Returns the Page Title and StarRating-component for the Salon-component.
 const TitleAndStarRating = ({ salonData }) => (
   <>
     <S.TitleContainer>

@@ -20,7 +20,6 @@ function Salon() {
   const [pageData, setPageData] = useState({})
   let { slug } = useParams()
 
-  let salonData = pageData[0]
 
   // fetches page-data depending on which salon the user clicked on. 
   useEffect(() => {
@@ -36,7 +35,7 @@ function Salon() {
     fetchPageData()
   }, [slug])
 
-
+  let salonData = pageData[0]
   return (
     <>
       <S.Container>

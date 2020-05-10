@@ -7,8 +7,8 @@ const Item = ({ src, alt, style }) => (
   <img style={style} src={src} alt={alt}></img>
 )
 
+// InfoSection renders all the data for the selected hairsalon. 
 const InfoSection = ({ salonData }) => {
-
   return (
     <>
       {
