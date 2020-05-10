@@ -8,19 +8,6 @@ import * as S from './styles'
 
 
 
-// make reusable? 
-const ArrowRightItem = () => (
-  <img src={Constant.ARROW_RIGHT_SM} alt='Go back'></img>
-)
-
-const ArrowLeftItem = () => (
-  <img src={Constant.ARROW_LEFT_LG} alt='Go to salon'></img>
-)
-
-const FilterItem = () => (
-  <img src={Constant.FILTER} alt='Filter Salons'></img>
-)
-
 const Item = ({ src, alt }) => (
   <img src={src} alt={alt}></img>
 )

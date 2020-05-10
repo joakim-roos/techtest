@@ -19,4 +19,8 @@ export const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: ${props => props.theme.colors.bg_primary};
+}
+
 `;
