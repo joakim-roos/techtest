@@ -170,6 +170,44 @@
       "unit": "kr",
       "duration": "30 min",
       "availabletime": "12.00"
+    },
+    {
+      "id": 10,
+      "name": "Saxarnas Härskare",
+      "slug": "saxarnasharskare",
+      "address": "Rådmansgatan 46",
+      "openfrom": "10:00",
+      "openuntil": "19:00",
+      "stars": 4,
+      "reviews": 20,
+      "postalcode": "113 57",
+      "city": "Stockholm",
+      "phone": "08-522 389 20",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
+      "url": "www.salongweb.com",
+      "price": 650,
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
+    },
+    {
+      "id": 11,
+      "name": "Klippmästeriet",
+      "slug": "klippmasteriet",
+      "address": "Rådmansgatan 46",
+      "openfrom": "10:00",
+      "openuntil": "19:00",
+      "stars": 3,
+      "reviews": 6,
+      "postalcode": "113 57",
+      "city": "Stockholm",
+      "phone": "08-522 389 20",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus erat non velit ultrices aliquam. Mauris id urna in lorem mattis faucibus. Fusce sit amet dolor a lectus iaculis ultricies.",
+      "url": "www.salongweb.com",
+      "price": 600,
+      "unit": "kr",
+      "duration": "30 min",
+      "availabletime": "12.00"
     }
   ]
 }
