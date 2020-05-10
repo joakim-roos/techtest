@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Sax & Fön",
+      "slug": "saxochfon",
       "address": "Rådmansgatan 46",
       "stars": 4,
       "postalcode": "113 57",
@@ -18,6 +19,7 @@
     {
       "id": 2,
       "name": "Hårizont",
+      "slug": "Harizont",
       "address": "Rådmansgatan 46",
       "stars": 4,
       "postalcode": "113 57",
@@ -33,6 +35,7 @@
     {
       "id": 3,
       "name": "Hårhuset",
+      "slug": "harhuset",
       "address": "Rådmansgatan 46",
       "stars": 4,
       "postalcode": "113 57",
@@ -48,6 +51,7 @@
     {
       "id": 4,
       "name": "Hair & Nu",
+      "slug": "hairochnu",
       "address": "Rådmansgatan 46",
       "stars": 4,
       "postalcode": "113 57",
@@ -63,6 +67,7 @@
     {
       "id": 5,
       "name": "Hårley Davidson",
+      "slug": "harleydavidson",
       "address": "Rådmansgatan 46",
       "stars": 4,
       "postalcode": "113 57",
@@ -78,6 +83,7 @@
     {
       "id": 6,
       "name": "Hairleys Klipp-Firma",
+      "slug": "hairleysklippfirma",
       "address": "Rådmansgatan 46",
       "stars": 5,
       "postalcode": "113 57",
@@ -93,6 +99,7 @@
     {
       "id": 7,
       "name": "Clouds Hår",
+      "slug": "cloudshar",
       "address": "Rådmansgatan 46",
       "stars": 5,
       "postalcode": "113 57",
@@ -108,6 +115,7 @@
     {
       "id": 8,
       "name": "Nytt hår, Say no more",
+      "slug": "nyttharsaynomore",
       "address": "Rådmansgatan 46",
       "stars": 2,
       "postalcode": "113 57",
@@ -123,6 +131,7 @@
     {
       "id": 9,
       "name": "Klipp & Sax",
+      "slug": "klippochsax",
       "address": "Rådmansgatan 46",
       "stars": 3,
       "postalcode": "113 57",

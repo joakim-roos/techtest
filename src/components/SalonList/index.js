@@ -17,6 +17,7 @@ const Item = ({ src, alt }) => (
 function SalonList(props) {
   /* const [filterRange, setFilterRange] = useState([])
   const [filteredSalons, setFilteredSalons] = useState({}) */
+  console.log(props.allSalons.slug)
   return (
     <div>
       <div style={{ position: 'sticky', top: '0' }}>
@@ -34,10 +35,11 @@ function SalonList(props) {
 
       {props.allSalons && props.allSalons.map(salon =>
         <Link
-          to={`/salon/:${salon.slug}`}
+          key={salon.slug}
+          to={`/salons/${salon.slug}`}
           style={{ textDecoration: 'none' }}
         >
-          <S.SalonContainer key={salon.id}>
+          <S.SalonContainer>
 
             <S.SalonLeft>
               <S.Paragraph>{salon.availabletime}</S.Paragraph>

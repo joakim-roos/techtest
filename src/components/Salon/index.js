@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import * as S from './styles'
 import { IMAGE, IMAGE2X, IMAGE3X } from '../../constants/assets'
 import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
@@ -29,8 +29,6 @@ width: 100%;
 const Item = ({ src, alt, style }) => (
   <img style={style} src={src} alt={alt}></img>
 )
-
-
 
 function Salon(props) {
   let { slug } = useParams()
