@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './styles'
 import { useLocation } from 'react-router-dom';
 
-
 const Header = (props) => {
   let location = useLocation()
   return (

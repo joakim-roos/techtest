@@ -43,7 +43,7 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: '1px solid #eeeeee',
-    '&:first-child': { borderTop: '1px solid #eeeeee' },
+    '&:first-of-type': { borderTop: '1px solid #eeeeee' },
     '&:last-child': {
       borderBottom: state.selectProps.menuIsOpen ? '1px solid #b69f58' : null
     },
@@ -70,6 +70,7 @@ const customStyles = {
   indicatorsContainer: () => ({
     padding: '1rem',
     backgroundColor: 'white',
+    borderTop: '1px solid #b69f58',
   }),
   dropdownIndicator: (provided, state) => ({
     padding: '0.5rem 0.2rem 0.5rem 0.2rem',
@@ -96,6 +97,7 @@ const customStyles = {
     flexWrap: 'wrap',
     alignItems: 'center',
     backgroundColor: 'white',
+    borderTop: '1px solid #b69f58'
   }),
 };
 
