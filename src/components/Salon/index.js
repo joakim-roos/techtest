@@ -44,6 +44,7 @@ function Salon() {
             srcRight={HEART}
             styleRight={{ padding: '1rem' }}
             altRight={'Make Favourite'}
+            isTransparent
           >
           </Header>
           <TitleAndStarRating salonData={salonData} />

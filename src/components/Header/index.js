@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 const Header = (props) => {
   let location = useLocation()
   return (
-    <S.Header>
+    <S.Header isTransparent={props.isTransparent}>
       <S.StyledLink to={props.LinkTo}>
         <img
           style={props.styleLeft}
