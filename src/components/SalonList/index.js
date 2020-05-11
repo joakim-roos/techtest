@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import FilterSalons from '../FilterDropdown'
 import StarRating from '../StarRating'
 import { Link } from 'react-router-dom';
