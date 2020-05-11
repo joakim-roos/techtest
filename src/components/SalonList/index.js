@@ -23,24 +23,20 @@ function SalonList(props) {
   // Filter through the allSalons-prop and returns the filtered data. 
   // filterValue is the value from the FilterDropdown-component. 
   useEffect(() => {
+    function filterSalons(minValue, maxValue) {
+      let result = props.allSalons.filter(salon =>
+        salon.price > minValue && salon.price <= maxValue)
+      setFilteredSalons(result)
+    }
     let value = filterValue.value
-    let result;
     if (value === '0-250') {
-      result = props.allSalons.filter(salon => salon.price > 0 && salon.price <= 250)
-      setFilteredSalons(result)
-      console.log(result)
+      filterSalons(0, 250)
     } else if (value === '250-500') {
-      result = props.allSalons.filter(salon => salon.price > 250 && salon.price <= 500)
-      setFilteredSalons(result)
-      console.log(result)
+      filterSalons(250, 500)
     } else if (value === '500-750') {
-      result = props.allSalons.filter(salon => salon.price > 500 && salon.price <= 750)
-      setFilteredSalons(result)
-      console.log(result)
+      filterSalons(500, 750)
     } else {
-      result = props.allSalons
-      setFilteredSalons(result)
-      console.log(result)
+      setFilteredSalons(props.allSalons)
     }
   }, [filterValue, props.allSalons])
 

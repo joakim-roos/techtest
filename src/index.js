@@ -7,13 +7,10 @@ import Theme from './Theme'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-
-
   <Theme>
     <GlobalStyle />
     <App />
   </Theme>
-
   ,
   document.getElementById('root')
 );
