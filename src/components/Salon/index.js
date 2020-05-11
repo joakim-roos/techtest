@@ -4,27 +4,21 @@ import * as S from './styles'
 import axios from 'axios'
 
 import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
+import { API_URL, SALON_SLUG } from '../../constants/routes'
 
-import { API_URL } from '../../constants/routes'
-
+import Header from '../Header'
 import InfoSection from './InfoSection'
 import TitleAndStarRating from './TitleAndStarRating'
 import Image from './Image'
-
-
-const Item = ({ src, alt, style }) => (
-  <img style={style} src={src} alt={alt}></img>
-)
 
 function Salon() {
   const [pageData, setPageData] = useState({})
   let { slug } = useParams()
 
-
-  // fetches page-data depending on which salon the user clicked on. 
+  // fetches page-data to be rendered depending on which salon the user clicked on. 
   useEffect(() => {
     const fetchPageData = () => {
-      axios.get(`${API_URL}/salons/?slug=${slug}`)
+      axios.get(`${API_URL}${SALON_SLUG}${slug}`)
         .then(res => {
           setPageData(res.data)
         })
@@ -41,18 +35,18 @@ function Salon() {
       <S.Container>
         <Image />
         <S.Gradient />
-
         <S.Wrapper>
-
-          <S.Header>
-            <S.StyledLink to='/salons'>
-              <Item style={{ marginTop: '1px' }} src={ARROW_LEFT_WHITE} alt={'go back'} />
-            </S.StyledLink>
-            <Item style={{ padding: '1rem' }} src={HEART} alt={'make favourite'}></Item>
-          </S.Header>
-
+          <Header
+            LinkTo={'/salons'}
+            srcLeft={ARROW_LEFT_WHITE}
+            styleLeft={{ marginTop: '1px' }}
+            altLeft={'Go Back'}
+            srcRight={HEART}
+            styleRight={{ padding: '1rem' }}
+            altRight={'Make Favourite'}
+          >
+          </Header>
           <TitleAndStarRating salonData={salonData} />
-
         </S.Wrapper>
       </S.Container>
 

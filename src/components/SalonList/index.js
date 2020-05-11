@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import FilterSalons from '../FilterDropdown'
 import StarRating from '../StarRating'
 import { Link } from 'react-router-dom';
 
-import * as Constant from '../../constants/assets'
+import { ARROW_LEFT_LG, FILTER, ARROW_RIGHT_SM } from '../../constants/assets'
 import * as S from './styles'
+
+import Header from '../Header'
 
 const Item = ({ src, alt }) => (
   <img src={src} alt={alt}></img>
@@ -17,7 +19,6 @@ function SalonList(props) {
   const filterHandler = (e) => {
     setFilterValue(e)
   }
-
 
   // Filter through the allSalons-prop and returns the filtered data. 
   // filterValue is the value from the FilterDropdown-component. 
@@ -43,21 +44,18 @@ function SalonList(props) {
     }
   }, [filterValue, props.allSalons])
 
-
-
   return (
     <div>
       <div style={{ position: 'sticky', top: '0' }}>
-        <S.Header>
-          <S.StyledLink to='#'>
-            <Item src={Constant.ARROW_LEFT_LG} alt={'Go back'} />
-          </S.StyledLink>
+        <Header
+          LinkTo={'#'}
+          srcLeft={ARROW_LEFT_LG}
+          altLeft={'Go Back'}
+          srcRight={FILTER}
+          altRight={'Filter Button'}
+        >
           <S.PageTitle>Hår</S.PageTitle>
-          <S.StyledLink to='#'>
-            <Item src={Constant.FILTER} alt={'Filter Salons'} />
-          </S.StyledLink>
-        </S.Header>
-
+        </Header>
         <FilterSalons
           allSalons={props.allSalons}
           filterHandler={filterHandler}
@@ -71,21 +69,18 @@ function SalonList(props) {
           style={{ textDecoration: 'none' }}
         >
           <S.SalonContainer>
-
             <S.SalonLeft>
               <S.Paragraph>{salon.availabletime}</S.Paragraph>
             </S.SalonLeft>
 
             <S.SalonMid>
               <S.SalonName>{salon.name}</S.SalonName>
-
               <StarRating
                 stars={salon.stars}
                 totalStars={5}
               >
                 {salon.reviews}
               </StarRating>
-
               <S.Paragraph>{salon.address}</S.Paragraph>
             </S.SalonMid>
 
@@ -95,9 +90,8 @@ function SalonList(props) {
             </S.SalonMidRight>
 
             <S.SalonRight>
-              <Item src={Constant.ARROW_RIGHT_SM} alt={'Go to salon'} />
+              <Item src={ARROW_RIGHT_SM} alt={'Go to salon'} />
             </S.SalonRight>
-
           </S.SalonContainer>
         </Link>
       )

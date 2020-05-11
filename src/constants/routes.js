@@ -1,4 +1,5 @@
+
+
+export const API_URL = 'https://simple-rest-api-for-hairsalon.herokuapp.com'
 export const SALONS = '/salons'
-export const SALON_ID = '/salons/:id'
-export const SALON_SLUG = '/salons/:slug'
-export const API_URL = 'http://localhost:4000'
+export const SALON_SLUG = '/salons/?slug='
