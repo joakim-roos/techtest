@@ -90,9 +90,8 @@ function SalonList(props) {
             </S.SalonRight>
           </S.SalonContainer>
         </Link>
-      )
-      }
-    </div >
+      )}
+    </div>
   )
 }
 

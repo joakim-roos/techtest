@@ -11,7 +11,6 @@ export const SalonContainer = styled.div`
 
 export const SalonLeft = styled.div`
 font-size: ${props => props.theme.fontSize.sm};
-
 `;
 
 export const SalonMid = styled.div`

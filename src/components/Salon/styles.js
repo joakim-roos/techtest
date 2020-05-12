@@ -1,29 +1,11 @@
-
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Header = styled.header`
-display: flex;
-justify-content: space-between;
-width: 100%;
-/* background-color: white;  */
-/* border-bottom: 1px solid ${props => props.theme.colors.gold}; */
-font-family: 'MillerBanner Light';
 
-> div:last-child {
-  padding: 1rem;
-}
-`;
-
-export const StyledLink = styled(Link)`
-padding: 1rem;
-display: flex;
-`;
-
-
-export const StyledImage = styled(Image)`
+export const StyledImage = styled.img`
 display: block;
 width: 100%;
+z-index: -1000;
 `;
 
 export const PageTitle = styled.h1`
@@ -47,6 +29,8 @@ export const LinkWrapper = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+padding-bottom: 1.2rem;
+background-color: #f9f9f9;
 
 > a:first-child {
   border-bottom: 2px solid ${props => props.theme.colors.gold}
@@ -54,6 +38,7 @@ justify-content: space-between;
 `;
 
 export const SectionLink = styled(Link)`
+background-color: ${props => props.theme.colors.white};
 font-size: ${props => props.theme.fontSize.sm};
 text-decoration: none;
 width: 50%;
@@ -71,16 +56,16 @@ padding: 1rem 1rem 0 1rem;
 `;
 
 export const InfoSection = styled.div`
-margin: 1rem;
+margin: 0 1rem 0 1rem;
 div {
   display: flex;
   padding: 1rem 0 1rem 0;
   background-color: ${props => props.theme.colors.bg_primary};
   border-bottom: 1px solid ${props => props.theme.colors.border_light};
 }
-> div:first-child {
+/* > div:first-child {
   margin-top: 1rem;
-}
+} */
 > div:last-child {
   border: none;
 }
