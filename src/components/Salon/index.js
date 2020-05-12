@@ -32,7 +32,6 @@ function Salon() {
   let salonData = pageData[0]
   return (
     <>
-
       <S.Container>
         <Image />
         <S.Gradient />
