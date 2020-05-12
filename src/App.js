@@ -8,19 +8,13 @@ import SalonList from './components/SalonList'
 import { API_URL, SALONS } from '././constants/routes'
 
 /* 
-  Hi, Joakim here! I hope you like these parts for the hairsalon app. 
-  I decided to use json-server for the data, and requesting this with axios.
-  I also use react-router-dom, react-select (for the select/option component).
-  To run "npm run json-server" and "npm run dev" i'm using "concurrently (see json.package).
-  It runs these two scripts when you run "npm start". 
-
-  I tried to make the application as close to the assets as possible, checking font-sizes, paddings etc. 
+  I tried to make the application as close to the assets provided as possible, checking font-sizes, paddings etc. 
 
   All desired functions should work.
 
-  Please be aware that I made this application for mobile-first (not ipad). 
+  Please be aware that I made this application for mobiles first, so it does look a bit wierd when using browser :)  
 
-  I really hope you like it :) 
+  I really hope you like it!
 */
 
 function App() {
