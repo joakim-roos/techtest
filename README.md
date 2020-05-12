@@ -23,8 +23,10 @@ npm start
 If you don't see anything at first, the API is probably taking a nap :zzz:
 Give it a few seconds so it can start up.
 
+<ins>This application is mobile-first which means it's a way more pleasant experience to check it out on a mobile device</ins> :milky_way:
+
 ### Built With
 
-- [React](https://reactjs.org/) - The framework.
+- [React](https://reactjs.org/) - The framework ⚛️
 - [Styled-Components](https://styled-components.com) - Style your apps without stress.
 - [React-Select](https://react-select.com/) - A fully customizable and beautiful Select Input control for ReactJS.
