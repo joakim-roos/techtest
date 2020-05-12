@@ -5,7 +5,7 @@ import axios from 'axios'
 import Salon from './components/Salon'
 import SalonList from './components/SalonList'
 
-import { API_URL, SALONS } from '././constants/routes'
+import { API_URL, SALONS, TOKEN } from '././constants/routes'
 
 function App() {
   const [allSalons, setAllSalons] = useState([])
@@ -14,7 +14,9 @@ function App() {
   // Adds the data to the allSalons-state. 
   useEffect(() => {
     const fetchAllSalons = () => {
-      axios.get(`${API_URL}${SALONS}`)
+      axios.get(`${API_URL}${SALONS}`, {
+        headers: { Authorization: `Bearer ${TOKEN}` }
+      })
         .then(res => {
           setAllSalons(res.data)
         })

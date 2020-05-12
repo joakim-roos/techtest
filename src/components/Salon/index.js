@@ -4,7 +4,7 @@ import * as S from './styles'
 import axios from 'axios'
 
 import { ARROW_LEFT_WHITE, HEART } from '../../constants/assets'
-import { API_URL, SALON_SLUG } from '../../constants/routes'
+import { API_URL, SALON_SLUG, TOKEN } from '../../constants/routes'
 
 import Header from '../Header'
 import InfoSection from './InfoSection'
@@ -18,7 +18,9 @@ function Salon() {
   // fetches page-data to be rendered depending on which salon the user clicked on. 
   useEffect(() => {
     const fetchPageData = () => {
-      axios.get(`${API_URL}${SALON_SLUG}${slug}`)
+      axios.get(`${API_URL}${SALON_SLUG}${slug}`, {
+        headers: { Authorization: `Bearer ${TOKEN}` }
+      })
         .then(res => {
           setPageData(res.data)
         })
