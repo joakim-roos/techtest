@@ -1,6 +1,6 @@
-# A mobile-first Hairsalon app.
+# A mobile-first Hairsalon app :blue_heart:
 
-### How to install
+## How to install
 
 Clone the repo:
 
@@ -20,10 +20,11 @@ To start the application in development mode:
 npm start
 ```
 
-If you don't see anything at first, the API is probably taking a nap. Give it a few seconds so it can start up.
+If you don't see anything at first, the API is probably taking a nap :zzz:
+Give it a few seconds so it can start up.
 
-## Built With
+### Built With
 
-[React](https://reactjs.org/) - The framework.
-[Styled-Components](https://styled-components.com) - Style your apps without stress.
-[React-Select](https://react-select.com/) - A fully customizable and beautiful Select Input control for ReactJS.
+- [React](https://reactjs.org/) - The framework.
+- [Styled-Components](https://styled-components.com) - Style your apps without stress.
+- [React-Select](https://react-select.com/) - A fully customizable and beautiful Select Input control for ReactJS.
