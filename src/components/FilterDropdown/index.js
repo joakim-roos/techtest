@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Select, { components } from 'react-select';
 import * as S from './styles'
@@ -30,7 +29,6 @@ import { ARROW_DOWN_SM } from '../../constants/assets'
 } */
 
 // filter options
-
 const filterOptions = [
   { value: 'all', label: 'Alla' },
   { value: '0-250', label: 'Pris 0 - 250 kr' },
@@ -54,7 +52,7 @@ const customStyles = {
     '&:hover': { backgroundColor: '#eeeeee', cursor: 'pointer' },
   }),
 
-  control: (provided, state) => ({
+  control: () => ({
     borderRadius: 0,
     display: 'flex',
     cursor: 'pointer',
@@ -77,7 +75,7 @@ const customStyles = {
     transform: state.selectProps.menuIsOpen ? 'rotateZ(180deg)' : null,
   }),
 
-  menu: (provided, state) => ({
+  menu: () => ({
     borderRadius: 0,
     fontSize: '15px',
     margin: 0,
