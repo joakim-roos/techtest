@@ -1,7 +1,9 @@
 # Salongen - A mobile-first Hairsalon app :blue_heart:
 
 A techtest called Salongen using a simple rest-api build with json-server for fetching data.
-The repo to the api is [here](https://github.com/joakim-roos/hairsalon-rest-api).
+It's deployed on heroku and can be found [here](https://hairsalon-joakim-roos.herokuapp.com)!
+
+The repo to the api is [here](https://github.com/joakim-roos/hairsalon-rest-api). The api is deployed so no need to clone it :surfer:
 
 ## How to install
 
