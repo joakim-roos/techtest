@@ -1,4 +1,7 @@
-# A mobile-first Hairsalon app :blue_heart:
+# Salongen - A mobile-first Hairsalon app :blue_heart:
+
+A techtest called Salongen using a simple rest-api build with json-server for fetching data.
+The repo to the api is [here](https://github.com/joakim-roos/hairsalon-rest-api).
 
 ## How to install
 
